@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+        <TextView
+            android:id="@+id/tvWlanName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/etWlanName"
+            android:textSize="20sp"
+            android:text="请输入名称:" />
+
+        <EditText
+            android:id="@+id/etWlanName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tvWlanName"
+            android:layout_alignParentRight="true"
+            android:ems="6" >
+
+            <requestFocus />
+        </EditText>
+    <TextView
+        android:id="@+id/tvWlanPassWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvWlanName"
+        android:layout_alignBottom="@+id/etPassWord"
+        android:textSize="20sp"
+        android:text="请输入密码:" />
+
+    <EditText
+        android:id="@+id/etPassWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvWlanPassWord"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@+id/etWlanName"
+        android:layout_below="@+id/etWlanName"
+        android:ems="6" />
+</RelativeLayout>

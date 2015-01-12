@@ -1,0 +1,217 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_operation" >
+    <!-- 标题在顶部 -->
+    <TextView
+        android:id="@+id/textView0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="#ffffff"
+        android:textSize = "20sp" />
+    <!-- 接收显示区的高度要动态设置 -->
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView0"
+		android:scrollbars = "vertical"
+		android:singleLine="false" 
+        android:textColor="#ffffff"
+        android:textSize = "20sp" />
+   <ImageView
+        android:id="@+id/imageView1"
+        android:src="@drawable/hengtiao"
+        android:layout_below="@+id/textView0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+   <Button
+        android:id="@+id/button_ret"
+        android:background="@drawable/button_send_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3sp"
+        android:textColor="#000"
+        android:text="返   回"
+        android:layout_marginLeft="3sp"
+        android:layout_marginRight="5sp" />
+   <!-- 发送区的宽度也要动态设置 -->
+    <EditText
+        android:id="@+id/etSendEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_toRightOf="@+id/button_ret"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3sp"
+        android:ems="8"
+        android:textColor="#000000"
+        android:background="@drawable/edit_selector"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+    <Button
+        android:id="@+id/button_send"
+        android:background="@drawable/button_send_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3sp"
+        android:layout_toRightOf="@+id/etSendEdit"
+        android:textColor="#000"
+        android:text="发   送"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:src="@drawable/hengtiao"
+        android:layout_above="@+id/etSendEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3sp"
+        android:layout_marginBottom="3sp"/>
+     <TextView
+        android:id="@+id/tvTargetIp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@+id/imageView2"
+        android:text="目标IP:" 
+        android:textColor="#ffffff"
+        android:textSize="20sp"/>
+     <EditText
+        android:id="@+id/etIp1"
+        android:layout_width="wrap_content"
+        android:layout_height="30sp"
+        android:layout_toRightOf="@+id/tvTargetIp"
+        android:layout_above="@+id/imageView2"
+        android:background="@drawable/edit_selector"
+        android:inputType="number"
+        android:text="192"
+        android:ems="2" />
+     <TextView
+	    android:id="@+id/tvIp1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@+id/etIp1"
+        android:layout_above="@+id/imageView2"
+	    android:text="." 
+	    android:textSize="20sp"/>
+    <EditText
+        android:id="@+id/etIp2"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/tvIp1"
+        android:layout_above="@+id/imageView2"
+        android:layout_height="30sp"
+        android:background="@drawable/edit_selector"
+        android:inputType="number"
+        android:text="168"
+        android:ems="2" />
+    <TextView
+        android:id="@+id/tvIp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/etIp2"
+        android:layout_above="@+id/imageView2"
+        android:text="." 
+        android:textSize="20sp"/>
+    <EditText
+        android:id="@+id/etIp3"
+        android:layout_width="wrap_content"
+        android:layout_height="30sp"
+        android:layout_toRightOf="@+id/tvIp2"
+        android:layout_above="@+id/imageView2"
+        android:background="@drawable/edit_selector"
+        android:inputType="number"
+        android:text="1"
+        android:ems="2" />
+    <TextView
+        android:id="@+id/tvIp3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/etIp3"
+        android:layout_above="@+id/imageView2"
+        android:text="." 
+        android:textSize="20sp"/>
+    <EditText
+        android:id="@+id/etIp4"
+        android:layout_width="wrap_content"
+        android:layout_height="30sp"
+        android:layout_toRightOf="@+id/tvIp3"
+        android:layout_above="@+id/imageView2"
+        android:background="@drawable/edit_selector"
+        android:inputType="number"
+        android:text="24"
+        android:ems="2" />
+    <Button
+        android:id="@+id/button_clear"
+        android:background="@drawable/button_clear_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/etIp4"
+        android:layout_toRightOf="@+id/etIp4"
+        android:layout_above="@+id/imageView2"
+        android:textColor="#000"
+        android:text="清   除"
+        android:layout_marginLeft="10sp" 
+        android:paddingLeft="15sp"
+        android:paddingRight="15sp"/>
+    <TextView
+        android:id="@+id/tvTargetPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etIp1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="3sp"
+        android:text="目标端口:" 
+        android:textColor="#ffffff"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/etTargetPort"
+        android:layout_width="wrap_content"
+        android:layout_height="30sp"
+        android:layout_above="@+id/etIp1"
+        android:layout_toRightOf="@+id/tvTargetPort"
+        android:layout_alignRight="@+id/etIp4"
+        android:layout_marginBottom="3sp"
+        android:background="@drawable/edit_selector"
+        android:inputType="number"
+        android:text="8080"
+        android:ems="4" />
+    <TextView
+        android:id="@+id/tvHexShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etIp1"
+        android:layout_toRightOf="@+id/etTargetPort"
+        android:layout_marginLeft="10sp"
+        android:layout_marginBottom="3sp"
+        android:text="Hex" 
+        android:textColor="#ffffff"
+        android:textSize="20sp"/>
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:background="@drawable/checkbox_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvHexShow"
+        android:layout_above="@+id/etIp1"
+        android:layout_alignTop="@+id/etTargetPort"
+        android:layout_marginBottom="3sp"
+        android:checked="false"
+        android:button="@null"
+        android:text="" />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:src="@drawable/hengtiao"
+        android:layout_above="@+id/etTargetPort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3sp"
+        android:layout_marginBottom="3sp"/>
+</RelativeLayout>
